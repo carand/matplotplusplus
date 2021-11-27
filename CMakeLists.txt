@@ -31,6 +31,7 @@ set_master_project_booleans() # detect if master project / dev mode
 set_debug_booleans() # detect if debug
 set_optimization_flags() # detect and set default optimization flags
 set_compiler_booleans() # detect compiler
+set_32bit_build() # build 32-bit architicture
 
 # What to build
 option(BUILD_EXAMPLES "Build examples" ${MASTER_PROJECT})
@@ -57,10 +58,17 @@ option(BUILD_EXPERIMENTAL_OPENGL_BACKEND "Compile target with the experimental O
 option(WITH_SYSTEM_CIMG "Use system-provided CImg.h instead of bundled" OFF)
 option(WITH_SYSTEM_NODESOUP "Use system-provided nodesoup instead of bundled" OFF)
 
+# architecture
+option(BUILD_32 "Build 32 bit" OFF)
+
 #######################################################
 ### Apply global options                            ###
 #######################################################
 # In development, we can set some options for all targets
+if(BUILD_32)
+    set_32bit_build()
+endif()
+
 if (MASTER_PROJECT)
     message("Setting global options")
     # Maybe add sanitizers to all targets
@@ -92,6 +100,8 @@ if (MASTER_PROJECT)
         # endif ()
     endif ()
 endif()
+
+
 
 #######################################################
 ### Libraries                                       ###
@@ -126,30 +136,30 @@ if (BUILD_INSTALLER)
 
     # Create Matplot++ConfigVersion.cmake and install it
     write_basic_package_version_file(
-            Matplot++ConfigVersion.cmake
-            VERSION ${PACKAGE_VERSION}
-            COMPATIBILITY SameMajorVersion
-    )
+        Matplot++ConfigVersion.cmake
+        VERSION ${PACKAGE_VERSION}
+        COMPATIBILITY SameMajorVersion
+        )
 
     # Install the file Matplot++ConfigVersion.cmake
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/Matplot++ConfigVersion.cmake
-            DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++)
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++)
 
     # Create Matplot++Config.cmake from Matplot++Config.cmake.in
     configure_package_config_file(
-            ${CMAKE_CURRENT_SOURCE_DIR}/Matplot++Config.cmake.in # input file
-            ${CMAKE_CURRENT_BINARY_DIR}/Matplot++Config.cmake    # output file
-            INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++
-    )
+        ${CMAKE_CURRENT_SOURCE_DIR}/Matplot++Config.cmake.in # input file
+        ${CMAKE_CURRENT_BINARY_DIR}/Matplot++Config.cmake    # output file
+        INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++
+        )
 
     # Install the file Matplot++Config.cmake
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/Matplot++Config.cmake
-            DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++)
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++)
 
     # Install cmake to find filesystem as a dependency
     if (NOT BUILD_SHARED_LIBS)
         install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindFilesystem.cmake
-                DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++)
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Matplot++)
     endif ()
 endif ()
 

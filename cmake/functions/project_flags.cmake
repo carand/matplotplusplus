@@ -1,3 +1,25 @@
+macro(set_32bit_build)
+
+
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
+        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+        set(CMAKE_SIZEOF_VOID_P 4)
+    endif()
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
+        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+        set(CMAKE_SIZEOF_VOID_P 4)
+
+        message("Exclude gnu 64 bit search path")
+        set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS OFF)
+        set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB32_PATHS ON)
+        set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIBX32_PATHS ON)
+        set(CMAKE_LIBRARY_PATH "/usr/lib/i386-linux-gnu" CACHE PATH "<desc>")
+        set(CMAKE_SIZEOF_VOID_P 4)
+    endif ()
+endmacro()
+
 # @brief Set variable indicating if this is a master project
 # - This is important to avoid building tests and examples when project is not master
 macro(set_master_project_booleans)
