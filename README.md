@@ -210,6 +210,71 @@ Add this header to your source files:
 
 However, in larger projects, it's always recommended to look for Matplot++ with `find_package` before including it as a subdirectory to avoid [ODR errors](https://en.wikipedia.org/wiki/One_Definition_Rule).
 
+#### Install as a Package via CMake
+
+If you have CMake 3.21 or greater, you can use the `system` build preset to 
+build the package system-wide:
+
+```bash
+cmake --preset=system
+cmake --build --preset=system
+sudo cmake --install build/system
+```
+
+Alternatively, if the `CMAKE_PREFIX_PATH` environment variable is set to 
+`$HOME/.local`, then you can install it locally. This can be set in `/etc/profile` 
+or your shell config. This will not affect discovery of packages installed 
+system-wide.
+
+```bash
+export CMAKE_PREFIX_PATH="$HOME/.local"
+```
+
+This has the advantage of not
+requiring sudo, and matplotplusplus will be installed in `$HOME/.local`. 
+
+```bash
+cmake --preset=local
+cmake --build --preset=local
+cmake --install build/local
+```
+
+You can now use it from CMake with `find_package`:
+
+```cmake
+find_package(Matplot++ REQUIRED)
+
+target_link_libraries(<your target> Matplot++::matplot)
+```
+
+If you're using a version of CMake too old to support presets, then building with
+ the system preset is equivilant to:
+
+```bash
+cmake -B build/system         \
+    -DBUILD_EXAMPLES=OFF      \
+    -DBUILD_SHARED_LIBS=ON    \
+    -DBUILD_TESTS=OFF         \
+    -CMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
+
+cmake --build build/system
+```
+
+While building with the local preset is equivilant to:
+
+```bash
+cmake -B build/local                      \
+    -DBUILD_EXAMPLES=OFF                  \
+    -DBUILD_SHARED_LIBS=ON                \
+    -DBUILD_TESTS=OFF                     \
+    -DCMAKE_BUILD_TYPE=Release            \
+    -DCMAKE_INSTALL_PREFIX="$HOME/.local" \
+    -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
+
+cmake --build build/local
+```
+
 #### Embed with automatic download
 
 `FetchContent` is a CMake command that can automatically download the Matplot++ repository. Check if you have [Cmake](http://cmake.org) 3.14+ installed:
@@ -229,7 +294,7 @@ Declare the source for the contents:
 ```cmake
 FetchContent_Declare(matplotplusplus
         GIT_REPOSITORY https://github.com/alandefreitas/matplotplusplus
-        GIT_TAG origin/master # or whatever tag you want
+        GIT_TAG origin/master) # or whatever tag you want
 ```
 
 Let CMake download the repository and include it as a subdirectory.
@@ -9307,6 +9372,13 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/codeinred">
+            <img src="https://avatars.githubusercontent.com/u/36810712?v=4" width="100;" alt="codeinred"/>
+            <br />
+            <sub><b>Alecto Irene Perez</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/gitplcc">
             <img src="https://avatars.githubusercontent.com/u/24852963?v=4" width="100;" alt="gitplcc"/>
             <br />
@@ -9319,15 +9391,22 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Randy Jones</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/sammi">
             <img src="https://avatars.githubusercontent.com/u/189128?v=4" width="100;" alt="sammi"/>
             <br />
             <sub><b>Sammi</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
+    <td align="center">
+        <a href="https://github.com/aalbaali">
+            <img src="https://avatars.githubusercontent.com/u/36138453?v=4" width="100;" alt="aalbaali"/>
+            <br />
+            <sub><b>Amro Al-Baali</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/avocadoboi">
             <img src="https://avatars.githubusercontent.com/u/24738592?v=4" width="100;" alt="avocadoboi"/>
@@ -9355,7 +9434,8 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Morwenn</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/kaffehalv">
             <img src="https://avatars.githubusercontent.com/u/33203776?v=4" width="100;" alt="kaffehalv"/>
@@ -9369,13 +9449,19 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Solo Super</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/acxz">
             <img src="https://avatars.githubusercontent.com/u/17132214?v=4" width="100;" alt="acxz"/>
             <br />
             <sub><b>Akash Patel</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/diverger">
+            <img src="https://avatars.githubusercontent.com/u/335566?v=4" width="100;" alt="diverger"/>
+            <br />
+            <sub><b>diverger</b></sub>
         </a>
     </td>
     <td align="center">
@@ -9391,12 +9477,13 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Myd7349</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/wjdragon">
             <img src="https://avatars.githubusercontent.com/u/88807697?v=4" width="100;" alt="wjdragon"/>
             <br />
-            <sub><b>wjdragon</b></sub>
+            <sub><b>Wjdragon</b></sub>
         </a>
     </td>
     <td align="center">
