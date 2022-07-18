@@ -45,12 +45,12 @@ option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 option(BUILD_WITH_SANITIZERS "Use pedantic warnings." ${DEBUG_MODE})
 
 # MSVC hacks
-option(BUILD_WITH_MSVC_HACKS "Accept utf-8 in MSVC by default." ON)
-option(BUILD_WITH_UTF8 "Accept utf-8 in MSVC by default." ON)
+option(BUILD_WITH_MSVC_HACKS "Accept utf-8 in MSVC by default." OFF)
+option(BUILD_WITH_UTF8 "Accept utf-8 in MSVC by default." OFF)
 option(BUILD_WITH_EXCEPTIONS "Add compiler flags to use exceptions." ON)
 
 # Features
-option(BUILD_HIGH_RESOLUTION_WORLD_MAP "Compile the high resolution maps for geoplots" ON)
+option(BUILD_HIGH_RESOLUTION_WORLD_MAP "Compile the high resolution maps for geoplots" OFF)
 option(BUILD_FOR_DOCUMENTATION_IMAGES "Bypass show() commands and save figures as .svg at destruction" OFF)
 option(BUILD_EXPERIMENTAL_OPENGL_BACKEND "Compile target with the experimental OpenGL backend" OFF)
 
