@@ -8,12 +8,12 @@
 #else
 #include <filesystem>
 #endif
+#include <cstdlib>
 #include <iostream>
 #include <matplot/util/common.h>
 #include <matplot/util/popen.h>
 #include <regex>
 #include <thread>
-#include <cstdlib>
 
 #ifdef MATPLOT_HAS_FBUFSIZE
 
@@ -51,9 +51,9 @@ namespace matplot::backend {
                 terminal_ = environment_terminal;
             }
 #if defined(_WIN32) || defined(_WIN64) || defined(__MINGW32__)
-        } else if (terminal_is_available("wxt")) {
+        } else if (terminal_is_available("x11")) {
             // 2nd option: wxt on windows, even if not default
-            terminal_ = "wxt";
+            terminal_ = "x11";
 #endif
         } else if (terminal_is_available("qt")) {
             // 3rd option: qt
@@ -318,7 +318,9 @@ namespace matplot::backend {
     }
 
     bool gnuplot::terminal_is_available(std::string_view term) {
-        std::string msg = run_and_get_output("gnuplot -e \"set terminal " + std::string(term.data()) + "\" 2>&1");
+        std::string msg =
+            run_and_get_output("gnuplot -e \"set terminal " +
+                               std::string(term.data()) + "\" 2>&1");
         return msg.empty();
     }
 
