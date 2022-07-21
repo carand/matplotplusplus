@@ -71,12 +71,12 @@ namespace matplot::backend {
         // http://www.gnuplot.info/files/gpReadMouseTest.c
         static constexpr bool allow_using_mouse = true;
 
-#if defined(TRACE_GNUPLOT_COMMANDS) &&                                         \
-    !defined(MATPLOT_BUILD_FOR_DOCUMENTATION_IMAGES)
+        /* #if defined(TRACE_GNUPLOT_COMMANDS) && \ */
+        /* !defined(MATPLOT_BUILD_FOR_DOCUMENTATION_IMAGES) */
         static constexpr bool trace_commands = true;
-#else
-        static constexpr bool trace_commands = false;
-#endif
+        /* #else */
+        /* static constexpr bool trace_commands = false; */
+        /* #endif */
 
         static constexpr size_t pipe_capacity_worst_case = BUFSIZ;
         /// File formats for figures and properties of terminals
