@@ -51,9 +51,9 @@ namespace matplot::backend {
                 terminal_ = environment_terminal;
             }
 #if defined(_WIN32) || defined(_WIN64) || defined(__MINGW32__)
-        } else if (terminal_is_available("x11")) {
+        } else if (terminal_is_available("qt")) {
             // 2nd option: wxt on windows, even if not default
-            terminal_ = "x11";
+            terminal_ = "qt";
 #endif
         } else if (terminal_is_available("qt")) {
             // 3rd option: qt
@@ -301,20 +301,21 @@ namespace matplot::backend {
     }
 
     std::string gnuplot::default_terminal_type() {
-        static std::string terminal_type;
-        const bool dont_know_term_type = terminal_type.empty();
-        if (dont_know_term_type) {
-            terminal_type =
-                run_and_get_output("gnuplot -e \"show terminal\" 2>&1");
-            terminal_type = std::regex_replace(
-                terminal_type, std::regex("[^]*terminal type is ([^ ]+)[^]*"),
-                "$1");
-            const bool still_dont_know_term_type = terminal_type.empty();
-            if (still_dont_know_term_type) {
-                terminal_type = "qt";
-            }
-        }
-        return terminal_type;
+        /* static std::string terminal_type; */
+        /* const bool dont_know_term_type = terminal_type.empty(); */
+        /* if (dont_know_term_type) { */
+        /*     terminal_type = */
+        /*         run_and_get_output("gnuplot -e \"show terminal\" 2>&1"); */
+        /*     terminal_type = std::regex_replace( */
+        /*         terminal_type, std::regex("[^]*terminal type is ([^
+         * ]+)[^]*"), */
+        /*         "$1"); */
+        /*     const bool still_dont_know_term_type = terminal_type.empty(); */
+        /*     if (still_dont_know_term_type) { */
+        /*         terminal_type = "qt"; */
+        /*     } */
+        /* } */
+        return "qt";
     }
 
     bool gnuplot::terminal_is_available(std::string_view term) {
