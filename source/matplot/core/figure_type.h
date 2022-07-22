@@ -304,7 +304,7 @@ namespace matplot {
         color_array color_{0., 0.94f, 0.94f, 0.94f};
         bool custom_color_{false}; // was this color defined by the user
         std::string font_{"Helvetica"};
-        float font_size_{10.};
+        float font_size_{8.};
 
         // Axes
         std::vector<std::shared_ptr<class axes_type>> children_;
