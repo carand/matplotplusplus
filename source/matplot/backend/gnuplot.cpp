@@ -315,7 +315,7 @@ namespace matplot::backend {
         /*         terminal_type = "qt"; */
         /*     } */
         /* } */
-        return "jpeg";
+        return "png";
     }
 
     bool gnuplot::terminal_is_available(std::string_view term) {
