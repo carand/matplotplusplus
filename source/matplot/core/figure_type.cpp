@@ -19,7 +19,8 @@ namespace matplot {
 
     figure_type::figure_type(size_t index, bool quiet_mode)
         : quiet_mode_(quiet_mode), number_(index) {
-#if defined(_WIN32) || defined(_WIN64) || defined(__MINGW32__) || defined(__CYGWIN__)
+#if defined(_WIN32) || defined(_WIN64) || defined(__MINGW32__) ||              \
+    defined(__CYGWIN__)
         // On windows, Helvetica will fallback to Sans anyway
         // So we avoid this warning by setting it to Sans already
         font_ = "Sans";
@@ -676,6 +677,8 @@ namespace matplot {
                    num2str(unsigned(font_size_ * title_font_size_multiplier_)) +
                    "'";
             cmd += " textcolor '" + to_string(title_color_) + "'";
+            // move title position
+            cmd += " offset 0, -2"
         }
         run_command(cmd);
     }

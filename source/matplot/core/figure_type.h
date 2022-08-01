@@ -244,7 +244,7 @@ namespace matplot {
         void font_size(float font_size);
 
         const std::string &title() const;
-        void title(std::string_view title);
+        void title(std::string_view title, int xOffset = 0, int yOffset = 0);
 
         const color_array &title_color() const;
         void title_color(const color_array &title_color);
