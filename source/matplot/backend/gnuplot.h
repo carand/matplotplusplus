@@ -73,9 +73,9 @@ namespace matplot::backend {
 
         /* #if defined(TRACE_GNUPLOT_COMMANDS) && \ */
         /* !defined(MATPLOT_BUILD_FOR_DOCUMENTATION_IMAGES) */
-        static constexpr bool trace_commands = true;
+        /* static constexpr bool trace_commands = true; */
         /* #else */
-        /* static constexpr bool trace_commands = false; */
+        static constexpr bool trace_commands = false;
         /* #endif */
 
         static constexpr size_t pipe_capacity_worst_case = BUFSIZ;
