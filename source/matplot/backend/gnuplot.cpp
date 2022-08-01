@@ -396,11 +396,11 @@ namespace matplot::backend {
 
     bool gnuplot::terminal_has_enhanced_option(const std::string &t) {
         SV_CONSTEXPR std::string_view whitelist[] = {
-            "canvas",     "postscript", "qt",       "aqua",     "caca",
-            "canvas",     "dumb",       "emf",      "enhanced", "jpeg",
-            "pdf",        "pdfcairo",   "pm",       "png",      "pngcairo",
-            "postscript", "sixelgd",    "tkcanvas", "windows",  "wxt",
-            "x11",        "ext",        "wxt"};
+            "canvas",  "postscript", "qt",      "aqua",     "caca",
+            "canvas",  "dumb",       "emf",     "enhanced", "jpeg",
+            "pdf",     "pdfcairo",   "pm",      "pngcairo", "postscript",
+            "sixelgd", "tkcanvas",   "windows", "wxt",      "x11",
+            "ext",     "wxt"};
         return std::find(std::begin(whitelist), std::end(whitelist), t) !=
                std::end(whitelist);
     }
