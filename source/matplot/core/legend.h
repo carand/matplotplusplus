@@ -137,7 +137,7 @@ namespace matplot {
 
         // Font
         std::string font_name_{"Helvetica"};
-        float font_size_{11};
+        float font_size_{8};
         std::string font_angle_{"normal"};
         std::string font_weight_{"bold"};
         color_array text_color_{0., 0, 0, 0};

@@ -25,7 +25,8 @@ namespace matplot {
         explicit axis_type(class axes_type *parent);
         explicit axis_type(class axes_type *parent, bool visible);
         axis_type(class axes_type *parent, double min, double max);
-        axis_type(class axes_type *parent, double min, double max, bool visible);
+        axis_type(class axes_type *parent, double min, double max,
+                  bool visible);
 
       public:
         void touch();
@@ -151,7 +152,7 @@ namespace matplot {
         // label
         std::string label_{""};
         std::string label_weight_{"normal"};
-        float label_font_size_{11};
+        float label_font_size_{8};
         color_array label_color_{0, 0, 0, 0};
 
         // line
