@@ -124,7 +124,7 @@ namespace matplot::backend {
         std::string terminal_{"qt"};
 
         // Position and size
-        std::array<unsigned, 4> position_{700, 558, 874, 614};
+        std::array<unsigned, 4> position_{700, 558, 800, 600};
 
         // Time we last flush, to avoid flushing results too fast
         std::chrono::high_resolution_clock::time_point last_flush_;
