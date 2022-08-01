@@ -152,7 +152,7 @@ namespace matplot {
         // label
         std::string label_{""};
         std::string label_weight_{"normal"};
-        float label_font_size_{8};
+        float label_font_size_{7};
         color_array label_color_{0, 0, 0, 0};
 
         // line
