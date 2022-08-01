@@ -34,7 +34,7 @@ namespace matplot {
         /// If we receive an axes_handle, we can convert it to a raw
         /// pointer because there is no ownership involved here
         template <class... Args>
-        labels(const axes_handle &parent, Args&&... args)
+        labels(const axes_handle &parent, Args &&... args)
             : labels(parent.get(), std::forward<Args>(args)...) {}
 
         virtual ~labels() = default;
@@ -104,7 +104,7 @@ namespace matplot {
         bool visible_{true};
         enum alignment alignment_ { alignment::automatic };
         std::string font_{"Helvetica"};
-        float font_size_{10};
+        float font_size_{8};
         color_array color_{0, 0, 0, 0};
     };
 } // namespace matplot
