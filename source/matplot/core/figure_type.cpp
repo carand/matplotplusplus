@@ -678,7 +678,7 @@ namespace matplot {
                    "'";
             cmd += " textcolor '" + to_string(title_color_) + "'";
             // move title position
-            cmd += " offset 0, -2"
+            cmd += " offset 0, -2";
         }
         run_command(cmd);
     }
