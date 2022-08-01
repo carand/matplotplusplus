@@ -7,9 +7,9 @@
 #include <matplot/util/common.h>
 
 namespace matplot::backend {
-    bool backend_interface::consumes_gnuplot_commands() { return false; }
+    bool backend_interface::consumes_gnuplot_commands() { return true; }
 
-    bool backend_interface::is_interactive() { return true; }
+    bool backend_interface::is_interactive() { return false; }
 
     const std::string &backend_interface::output() {
         const static std::string r{};
@@ -21,8 +21,8 @@ namespace matplot::backend {
         return r;
     }
 
-    bool
-    backend_interface::output([[maybe_unused]] const std::string &filename) {
+    bool backend_interface::output([
+        [maybe_unused]] const std::string &filename) {
         throw std::logic_error(
             "There is no function to set the output in this backend yet. Maybe "
             "this backend does not support non-interactive mode.");
@@ -36,9 +36,9 @@ namespace matplot::backend {
             "this backend does not support non-interactive mode.");
     }
 
-    unsigned int backend_interface::width() { return 560; }
+    unsigned int backend_interface::width() { return 800; }
 
-    unsigned int backend_interface::height() { return 420; }
+    unsigned int backend_interface::height() { return 600; }
 
     void backend_interface::width([[maybe_unused]] unsigned int new_width) {
         throw std::logic_error(
@@ -50,9 +50,7 @@ namespace matplot::backend {
             "There is no function to set the height in this backend yet");
     }
 
-    bool backend_interface::new_frame() {
-        return true;
-    }
+    bool backend_interface::new_frame() { return true; }
 
     bool backend_interface::render_data() {
         if (!consumes_gnuplot_commands()) {
@@ -129,8 +127,8 @@ namespace matplot::backend {
         }
     }
 
-    void
-    backend_interface::run_command([[maybe_unused]] const std::string &text) {
+    void backend_interface::run_command([
+        [maybe_unused]] const std::string &text) {
         if (consumes_gnuplot_commands()) {
             throw std::logic_error(
                 "There is no function to run_command in this backend yet");
@@ -141,8 +139,8 @@ namespace matplot::backend {
         }
     }
 
-    void backend_interface::include_comment(
-        [[maybe_unused]] const std::string &text) {
+    void backend_interface::include_comment([
+        [maybe_unused]] const std::string &text) {
         if (consumes_gnuplot_commands()) {
             throw std::logic_error(
                 "There is no function to include_comment in this backend yet");
@@ -167,14 +165,14 @@ namespace matplot::backend {
 
     unsigned int backend_interface::position_y() { return 558; }
 
-    void backend_interface::position_x(
-        [[maybe_unused]] unsigned int new_position_x) {}
+    void backend_interface::position_x([
+        [maybe_unused]] unsigned int new_position_x) {}
 
-    void backend_interface::position_y(
-        [[maybe_unused]] unsigned int new_position_y) {}
+    void backend_interface::position_y([
+        [maybe_unused]] unsigned int new_position_y) {}
 
-    void backend_interface::draw_background(
-        [[maybe_unused]] const std::array<float, 4> &color) {}
+    void backend_interface::draw_background([
+        [maybe_unused]] const std::array<float, 4> &color) {}
 
     void backend_interface::draw_rectangle(
         [[maybe_unused]] const double x1, [[maybe_unused]] const double x2,
@@ -194,12 +192,9 @@ namespace matplot::backend {
         return false;
     }
 
-    void
-    backend_interface::window_title([[maybe_unused]] const std::string &title) {
-    }
+    void backend_interface::window_title([
+        [maybe_unused]] const std::string &title) {}
 
-    std::string backend_interface::window_title() {
-        return "";
-    }
+    std::string backend_interface::window_title() { return ""; }
 
 } // namespace matplot::backend
