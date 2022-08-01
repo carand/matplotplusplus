@@ -95,7 +95,7 @@ namespace matplot::backend {
                 std::pair{".jpg", "jpeg"}, std::pair{".tex", "epslatex"},
                 std::pair{".mf", "mf"}, std::pair{".mp", "mp"},
                 std::pair{".pcl5", "pcl5"}, std::pair{".pdf", "pdf"},
-                std::pair{".pdf", "pdfcairo"}, std::pair{".png", "pngcairo"},
+                std::pair{".pdf", "pdfcairo"}, std::pair{".png", "png"},
                 std::pair{".png", "png"}, std::pair{".tex", "pslatex"},
                 std::pair{".tex", "context"}, std::pair{".tex", "texdraw"},
                 std::pair{".tex", "tikz"},
@@ -124,7 +124,7 @@ namespace matplot::backend {
         std::string terminal_{"qt"};
 
         // Position and size
-        std::array<unsigned, 4> position_{680, 558, 560, 420};
+        std::array<unsigned, 4> position_{680, 558, 800, 600};
 
         // Time we last flush, to avoid flushing results too fast
         std::chrono::high_resolution_clock::time_point last_flush_;

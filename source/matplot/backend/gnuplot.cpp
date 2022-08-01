@@ -422,18 +422,18 @@ namespace matplot::backend {
         // We prefer a blacklist because it's better to get a warning
         // in a false positive than remove the fonts in a false negative.
         SV_CONSTEXPR std::string_view blacklist[] = {
-            "dxf",      "eepic",   "emtex",   "hpgl",    "latex",
-            "mf",       "pcl5",    "pslatex", "pstex",   "pstricks",
-            "qms",      "tek40xx", "tek410x", "texdraw", "tkcanvas",
-            "vttek",    "xterm",   "jpeg",    "dumb",    "tpic",
-            "sixelgd",  "png",     "lua",     "jpeg",    "epscairo",
-            "epslatex", "canvas",  "dumb",    "dxy800a", "emxvga",
-            "pdfcairo", "cgi",     "gif",     "gpic",    "grass",
-            "hp2623a",  "hp2648",  "hp500c",  "hpgl",    "pcl5",
-            "hpljii",   "hppj",    "imagen",  "linux",   "lua",
-            "lua tikz", "mf",      "mif",     "mp",      "pbm",
-            "pm",       "qms",     "regis",   "svga",    "texdraw",
-            "tikz",     "tpic",    "vgagl",   "vws",     "pdf"};
+            "dxf",     "eepic",   "emtex",   "hpgl",     "latex",
+            "mf",      "pcl5",    "pslatex", "pstex",    "pstricks",
+            "qms",     "tek40xx", "tek410x", "texdraw",  "tkcanvas",
+            "vttek",   "xterm",   "jpeg",    "dumb",     "tpic",
+            "sixelgd", "lua",     "jpeg",    "epscairo", "epslatex",
+            "canvas",  "dumb",    "dxy800a", "emxvga",   "pdfcairo",
+            "cgi",     "gif",     "gpic",    "grass",    "hp2623a",
+            "hp2648",  "hp500c",  "hpgl",    "pcl5",     "hpljii",
+            "hppj",    "imagen",  "linux",   "lua",      "lua tikz",
+            "mf",      "mif",     "mp",      "pbm",      "pm",
+            "qms",     "regis",   "svga",    "texdraw",  "tikz",
+            "tpic",    "vgagl",   "vws",     "pdf"};
         return std::find(std::begin(blacklist), std::end(blacklist), t) ==
                std::end(blacklist);
     }
