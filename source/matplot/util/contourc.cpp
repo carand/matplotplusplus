@@ -400,7 +400,7 @@ namespace matplot {
                 // accumulate the number of points for each line child
                 for (children_it = children.begin();
                      children_it != children.end(); ++children_it) {
-                    npoints += static_cast<size_t>((*children_it)->size() + 1);
+                    /* npoints += static_cast<size_t>((*children_it)->size() + 1); */
                 }
 
                 auto is_valid_point = [](double x, double y) {
