@@ -9,7 +9,7 @@
 // NDEBUG macro, which is achieved by adding the following
 //     undef_macros=['NDEBUG']
 // to the appropriate make_extension call in setupext.py, and then rebuilding.
-#define NO_IMPORT_ARRAY
+/* #define NO_IMPORT_ARRAY */
 
 // #include "mplutils.h"
 // https://github.com/matplotlib/matplotlib/blob/master/src/mplutils.h
@@ -100,8 +100,8 @@ namespace matplot {
 #define EXISTS_ANY_CORNER(quad) (!EXISTS_NONE(quad) && !EXISTS_QUAD(quad))
 #define EXISTS_W_EDGE(quad)                                                    \
     (EXISTS_QUAD(quad) || EXISTS_SW_CORNER(quad) || EXISTS_NW_CORNER(quad))
-#define EXISTS_E_EDGE(quad)                                                    \
-    (EXISTS_QUAD(quad) || EXISTS_SE_CORNER(quad) || EXISTS_NE_CORNER(quad))
+/* #define EXISTS_E_EDGE(quad)                                                    \ */
+/*     (EXISTS_QUAD(quad) || EXISTS_SE_CORNER(quad) || EXISTS_NE_CORNER(quad)) */
 #define EXISTS_S_EDGE(quad)                                                    \
     (EXISTS_QUAD(quad) || EXISTS_SW_CORNER(quad) || EXISTS_SE_CORNER(quad))
 #define EXISTS_N_EDGE(quad)                                                    \
