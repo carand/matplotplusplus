@@ -9307,6 +9307,13 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
 <table>
 <tr>
     <td align="center">
+        <a href="https://github.com/carand">
+            <img src="https://avatars.githubusercontent.com/u/2034039?v=4" width="100;" alt="carand"/>
+            <br />
+            <sub><b>carand</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/alandefreitas">
             <img src="https://avatars.githubusercontent.com/u/5369819?v=4" width="100;" alt="alandefreitas"/>
             <br />
@@ -9340,15 +9347,15 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Actions-user</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/aminya">
             <img src="https://avatars.githubusercontent.com/u/16418197?v=4" width="100;" alt="aminya"/>
             <br />
             <sub><b>Amin Yahyaabadi</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/j0hnnybash">
             <img src="https://avatars.githubusercontent.com/u/100471420?v=4" width="100;" alt="j0hnnybash"/>
@@ -9383,27 +9390,13 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Edvins Mineikis</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/codeinred">
-            <img src="https://avatars.githubusercontent.com/u/36810712?v=4" width="100;" alt="codeinred"/>
-            <br />
-            <sub><b>Alecto Irene Perez</b></sub>
-        </a>
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/gitplcc">
-            <img src="https://avatars.githubusercontent.com/u/24852963?v=4" width="100;" alt="gitplcc"/>
+        <a href="https://github.com/acxz">
+            <img src="https://avatars.githubusercontent.com/u/17132214?v=4" width="100;" alt="acxz"/>
             <br />
-            <sub><b>Gitplcc</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/madronalabs">
-            <img src="https://avatars.githubusercontent.com/u/1434276?v=4" width="100;" alt="madronalabs"/>
-            <br />
-            <sub><b>Randy Jones</b></sub>
+            <sub><b>Akash Patel</b></sub>
         </a>
     </td>
     <td align="center">
@@ -9414,89 +9407,82 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/acxz">
-            <img src="https://avatars.githubusercontent.com/u/17132214?v=4" width="100;" alt="acxz"/>
+        <a href="https://github.com/madronalabs">
+            <img src="https://avatars.githubusercontent.com/u/1434276?v=4" width="100;" alt="madronalabs"/>
             <br />
-            <sub><b>Akash Patel</b></sub>
+            <sub><b>Randy Jones</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/aalbaali">
-            <img src="https://avatars.githubusercontent.com/u/36138453?v=4" width="100;" alt="aalbaali"/>
+        <a href="https://github.com/gitplcc">
+            <img src="https://avatars.githubusercontent.com/u/24852963?v=4" width="100;" alt="gitplcc"/>
             <br />
-            <sub><b>Amro Al-Baali</b></sub>
+            <sub><b>Gitplcc</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/avocadoboi">
-            <img src="https://avatars.githubusercontent.com/u/24738592?v=4" width="100;" alt="avocadoboi"/>
+        <a href="https://github.com/codeinred">
+            <img src="https://avatars.githubusercontent.com/u/36810712?v=4" width="100;" alt="codeinred"/>
             <br />
-            <sub><b>BjC6rn Sundin</b></sub>
+            <sub><b>Alecto Irene Perez</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/wjdragon">
+            <img src="https://avatars.githubusercontent.com/u/88807697?v=4" width="100;" alt="wjdragon"/>
+            <br />
+            <sub><b>wjdragon</b></sub>
         </a>
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/csernib">
-            <img src="https://avatars.githubusercontent.com/u/26774231?v=4" width="100;" alt="csernib"/>
+        <a href="https://github.com/myd7349">
+            <img src="https://avatars.githubusercontent.com/u/5435649?v=4" width="100;" alt="myd7349"/>
             <br />
-            <sub><b>BC!lint Cserni</b></sub>
+            <sub><b>myd7349</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/david-x64">
-            <img src="https://avatars.githubusercontent.com/u/11367746?v=4" width="100;" alt="david-x64"/>
+        <a href="https://github.com/kwoodle">
+            <img src="https://avatars.githubusercontent.com/u/11303028?v=4" width="100;" alt="kwoodle"/>
             <br />
-            <sub><b>David</b></sub>
+            <sub><b>kwoodle</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/dimztimz">
-            <img src="https://avatars.githubusercontent.com/u/6236568?v=4" width="100;" alt="dimztimz"/>
+        <a href="https://github.com/ino-josh">
+            <img src="https://avatars.githubusercontent.com/u/91980116?v=4" width="100;" alt="ino-josh"/>
             <br />
-            <sub><b>Dimitrij Mijoski</b></sub>
+            <sub><b>ino-josh</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/saxbophone">
-            <img src="https://avatars.githubusercontent.com/u/8693463?v=4" width="100;" alt="saxbophone"/>
+        <a href="https://github.com/eagle-dai">
+            <img src="https://avatars.githubusercontent.com/u/1788093?v=4" width="100;" alt="eagle-dai"/>
             <br />
-            <sub><b>Joshua Saxby</b></sub>
+            <sub><b>Eagle Dai</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/MaBnt">
-            <img src="https://avatars.githubusercontent.com/u/28400222?v=4" width="100;" alt="MaBnt"/>
+        <a href="https://github.com/diverger">
+            <img src="https://avatars.githubusercontent.com/u/335566?v=4" width="100;" alt="diverger"/>
             <br />
-            <sub><b>MaBnt</b></sub>
+            <sub><b>diverger</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/globberwops">
-            <img src="https://avatars.githubusercontent.com/u/11492152?v=4" width="100;" alt="globberwops"/>
+        <a href="https://github.com/tretre91">
+            <img src="https://avatars.githubusercontent.com/u/63788850?v=4" width="100;" alt="tretre91"/>
             <br />
-            <sub><b>Martin Stump</b></sub>
+            <sub><b>Trévis Morvany</b></sub>
         </a>
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/Morwenn">
-            <img src="https://avatars.githubusercontent.com/u/1164683?v=4" width="100;" alt="Morwenn"/>
+        <a href="https://github.com/TheGreatRambler">
+            <img src="https://avatars.githubusercontent.com/u/31906920?v=4" width="100;" alt="TheGreatRambler"/>
             <br />
-            <sub><b>Morwenn</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/kaffehalv">
-            <img src="https://avatars.githubusercontent.com/u/33203776?v=4" width="100;" alt="kaffehalv"/>
-            <br />
-            <sub><b>Niclas Wall Wennerdal</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/RTrioux">
-            <img src="https://avatars.githubusercontent.com/u/37375368?v=4" width="100;" alt="RTrioux"/>
-            <br />
-            <sub><b>RTrioux</b></sub>
+            <sub><b>TheGreatRambler</b></sub>
         </a>
     </td>
     <td align="center">
@@ -9507,12 +9493,34 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/TheGreatRambler">
-            <img src="https://avatars.githubusercontent.com/u/31906920?v=4" width="100;" alt="TheGreatRambler"/>
+        <a href="https://github.com/RTrioux">
+            <img src="https://avatars.githubusercontent.com/u/37375368?v=4" width="100;" alt="RTrioux"/>
             <br />
-            <sub><b>TheGreatRambler</b></sub>
+            <sub><b>RTrioux</b></sub>
         </a>
     </td>
+    <td align="center">
+        <a href="https://github.com/kaffehalv">
+            <img src="https://avatars.githubusercontent.com/u/33203776?v=4" width="100;" alt="kaffehalv"/>
+            <br />
+            <sub><b>Niclas Wall Wennerdal</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Morwenn">
+            <img src="https://avatars.githubusercontent.com/u/1164683?v=4" width="100;" alt="Morwenn"/>
+            <br />
+            <sub><b>Morwenn</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/globberwops">
+            <img src="https://avatars.githubusercontent.com/u/11492152?v=4" width="100;" alt="globberwops"/>
+            <br />
+            <sub><b>Martin Stump</b></sub>
+        </a>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/ankane">
             <img src="https://avatars3.githubusercontent.com/u/220358?v=4" width="100;" alt="ankane"/>
