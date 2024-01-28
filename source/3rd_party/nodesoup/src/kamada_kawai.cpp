@@ -85,7 +85,7 @@ Reduce the energy of the next vertex with most energy until all the vertices hav
 a energy below energy_threshold
 */
 void KamadaKawai::operator()(vector<Point2D>& positions) const {
-    vertex_id_t v_id;
+    vertex_id_t v_id = 0;
     while (find_max_vertex_energy_(positions, v_id) > energy_threshold_) {
         // move vertex step by step until its energy goes below threshold
         // (apparently this is equivalent to the newton raphson method)
