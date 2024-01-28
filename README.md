@@ -9310,7 +9310,7 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         <a href="https://github.com/carand">
             <img src="https://avatars.githubusercontent.com/u/2034039?v=4" width="100;" alt="carand"/>
             <br />
-            <sub><b>carand</b></sub>
+            <sub><b>Carand</b></sub>
         </a>
     </td>
     <td align="center">
@@ -9431,7 +9431,7 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         <a href="https://github.com/wjdragon">
             <img src="https://avatars.githubusercontent.com/u/88807697?v=4" width="100;" alt="wjdragon"/>
             <br />
-            <sub><b>wjdragon</b></sub>
+            <sub><b>Wjdragon</b></sub>
         </a>
     </td></tr>
 <tr>
@@ -9439,21 +9439,21 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         <a href="https://github.com/myd7349">
             <img src="https://avatars.githubusercontent.com/u/5435649?v=4" width="100;" alt="myd7349"/>
             <br />
-            <sub><b>myd7349</b></sub>
+            <sub><b>Myd7349</b></sub>
         </a>
     </td>
     <td align="center">
         <a href="https://github.com/kwoodle">
             <img src="https://avatars.githubusercontent.com/u/11303028?v=4" width="100;" alt="kwoodle"/>
             <br />
-            <sub><b>kwoodle</b></sub>
+            <sub><b>Kwoodle</b></sub>
         </a>
     </td>
     <td align="center">
         <a href="https://github.com/ino-josh">
             <img src="https://avatars.githubusercontent.com/u/91980116?v=4" width="100;" alt="ino-josh"/>
             <br />
-            <sub><b>ino-josh</b></sub>
+            <sub><b>Ino-josh</b></sub>
         </a>
     </td>
     <td align="center">
@@ -9467,14 +9467,14 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         <a href="https://github.com/diverger">
             <img src="https://avatars.githubusercontent.com/u/335566?v=4" width="100;" alt="diverger"/>
             <br />
-            <sub><b>diverger</b></sub>
+            <sub><b>Diverger</b></sub>
         </a>
     </td>
     <td align="center">
         <a href="https://github.com/tretre91">
             <img src="https://avatars.githubusercontent.com/u/63788850?v=4" width="100;" alt="tretre91"/>
             <br />
-            <sub><b>Trévis Morvany</b></sub>
+            <sub><b>TrC)vis Morvany</b></sub>
         </a>
     </td></tr>
 <tr>
