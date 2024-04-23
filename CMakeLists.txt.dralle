@@ -1,0 +1,34 @@
+# vim: set filetype=cmake
+# vim: set syntax=cmake
+
+find_program(LSB_RELEASE_CMD lsb_release)
+set(DISTRO_CODENAME $ENV{DISTRO_CODENAME})
+mark_as_advanced(LSB_RELEASE_CMD)
+if (LSB_RELEASE_CMD)
+    execute_process(COMMAND "${LSB_RELEASE_CMD}" --codename --short
+        OUTPUT_VARIABLE DISTRO_CODENAME
+        OUTPUT_STRIP_TRAILING_WHITESPACE)
+endif ()
+
+set(DISTRO_ID $ENV{DISTRO_ID})
+mark_as_advanced(LSB_RELEASE_CMD)
+if (LSB_RELEASE_CMD)
+    execute_process(COMMAND "${LSB_RELEASE_CMD}" --id --short
+        OUTPUT_VARIABLE DISTRO_ID
+        OUTPUT_STRIP_TRAILING_WHITESPACE)
+endif ()
+
+
+
+
+set(APP_NAME ${matplotplusplus})
+set(APP_VENDOR "Dralle GmbH")
+set(APP_EMAIL "https://github.com/alandefreitas/matplotplusplus")
+set (APP_DESCRIPTION ${CPACK_PACKAGE_DESCRIPTION_SUMMARY})
+
+set(APP_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
+set(APP_VERSION_MINOR ${PROJECT_VERSION_MINOR})
+set(APP_VERSION_PATCH ${PROJECT_VERSION_PATCH})
+
+set(CPACK_RESOURCE_FILE_LICENSE "${MATPLOT_ROOT_DIR}/LICENSE")
+set(CPACK_RESOURCE_FILE_README "${MATPLOT_ROOT_DIR}/README.md")

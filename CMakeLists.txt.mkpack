@@ -1,0 +1,91 @@
+# vim: set filetype=cmake
+# vim: set syntax=cmake
+
+# general cpack variables
+set(CPACK_PACKAGE_CONTACT "${APP_EMAIL}")
+set(CPACK_PACKAGE_VENDOR "${APP_VENDOR}")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "${APP_DESCRIPTION}")
+
+# CPACK_PACKAGE_VERSION
+SET(CPACK_PACKAGE_VERSION_MAJOR "${APP_VERSION_MAJOR}")
+SET(CPACK_PACKAGE_VERSION_MINOR "${APP_VERSION_MINOR}")
+SET(CPACK_PACKAGE_VERSION_PATCH "${APP_VERSION_PATCH}")
+
+# add date stamp to CPACK_PACKAGE_VERSION
+string(TIMESTAMP STAMP "%Y%m%d+%H%M%S")
+
+set(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}-${APP_SOVERSION}+${STAMP}")
+# place our package in opt
+# set(CPACK_PACKAGING_INSTALL_PREFIX "/usr/local/${APP_NAME}")
+set(CPACK_PACKAGING_INSTALL_PREFIX "/usr/local/")
+# ignore some folders and files, when generatin source package
+set(CPACK_SOURCE_IGNORE_FILES "${PROJECT_BINARY_DIR};/\.git/;\.swp$;\.#;/#;.*~;cscope.*;\.gitignore;\.gdb_history;\.nvimlog;tags$;/INSTALL_DIR/;/3rdparty/")
+# if architecture is already set (e.g. to "all"), this is not needed
+# add ~distribution-codename (e.g. ~trusty or ~xenial) to end of package version
+# if lsb_release is available, take it from there or fall back to DISTRO_CODENAME env variable
+set(DISTRO_CODENAME $ENV{DISTRO_CODENAME})
+find_program(LSB_RELEASE_CMD lsb_release)
+mark_as_advanced(LSB_RELEASE_CMD)
+if (LSB_RELEASE_CMD)
+    execute_process(COMMAND "${LSB_RELEASE_CMD}" --codename --short
+        OUTPUT_VARIABLE DISTRO_CODENAME
+        OUTPUT_STRIP_TRAILING_WHITESPACE)
+endif ()
+
+################################################################################
+### package dependencies
+################################################################################
+# set(MY_DEPENDEC)
+
+
+
+################################################################################
+### active generators
+################################################################################
+set(CPACK_GENERATOR "DEB")
+
+################################################################################
+### source generators
+################################################################################
+# set(CPACK_SOURCE_GENERATOR "TGZ")
+
+################################################################################
+### debian package specific stuff
+################################################################################
+#set(CPACK_DEBIAN_PACKAGE_DEBUG ON)
+### Package dependencies
+# SET(CPACK_DEBIAN_PACKAGE_DEPENDS "")
+
+# SET(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
+SET(CPACK_DEBIAN_PACKAGE_SECTION "devel")
+
+if(BUILD_32)
+    SET(CPACK_DEBIAN_PACKAGE_ARCHITECTURE i386)
+else()
+    SET(CPACK_DEBIAN_PACKAGE_ARCHITECTURE amd64)
+endif()
+
+set(CPACK_PACKAGE_FILE_NAME
+    "${APP_NAME}-${CPACK_PACKAGE_VERSION}-${DISTRO_CODENAME}_${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
+# autogenerate dependency information
+set (CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+# set(CPACK_DEBIAN_PACKAGE_CONFLICTS "terralib-5.2.4, terralib-5.3.0, terralib-5.3.1, terralib-5.3.2, terralib-5.3.3")
+set(CPACK_DEBIAN_PACKAGE_CONFLICTS)
+# This variable indicates if the Debian policy on control files should be strictly followed.
+set(CPACK_DEBIAN_PACKAGE_CONTROL_STRICT_PERMISSION TRUE)
+
+
+# if (${CPACK_GENERATOR} STREQUAL "TGZ")
+
+#     set(CPACK_SET_DESTDIR OFF)
+#     set(CMAKE_INSTALL_RPATH ".")
+#     set_target_properties(${APP_NAME}
+#         PROPERTIES INSTALL_RPATH ".")
+# elseif (${CPACK_GENERATOR} STREQUAL "DEB")
+set(CPACK_SET_DESTDIR ON)
+set(CMAKE_INSTALL_RPATH "/usr/local/${APP_NAME}")
+set_target_properties(${APP_NAME}
+    PROPERTIES INSTALL_RPATH "/usr/local/${APP_NAME}")
+# endif ()
+
+include(CPack)

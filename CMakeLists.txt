@@ -39,8 +39,8 @@ if (${MASTER_PROJECT} AND BUILD_TESTING)
 else()
     option(MATPLOTPP_BUILD_TESTS "Build tests" OFF)
 endif()
-option(MATPLOTPP_BUILD_INSTALLER "Build installer target" ${MASTER_PROJECT})
-option(MATPLOTPP_BUILD_PACKAGE "Build package" ${MASTER_PROJECT})
+option(MATPLOTPP_BUILD_INSTALLER "Build installer target" ON)
+option(MATPLOTPP_BUILD_PACKAGE "Build package" OFF)
 
 # How to build
 option(MATPLOTPP_BUILD_WITH_PEDANTIC_WARNINGS "Use pedantic warnings. This is useful for developers because many of these warnings will be in continuous integration anyway." ${DEBUG_MODE})
@@ -174,5 +174,19 @@ if (MATPLOTPP_BUILD_INSTALLER AND MATPLOTPP_BUILD_PACKAGE)
     set(CPACK_SOURCE_IGNORE_FILES ${GITIGNORE_CONTENTS})
 
     # Always include CPack at last
-    include(CPack)
+    # include(CPack)
 endif ()
+
+##### Modifications for deb-package build
+
+include(dateTime)
+TIME( APP_BUILD_TIME )
+DATE( APP_BUILD_DATE )
+
+include(CMakeLists.txt.dralle)
+include(CMakeLists.txt.mkpack)
+# Always include CPack at last
+include(CPack)
+### Modifications for deb-package build END
+
+
