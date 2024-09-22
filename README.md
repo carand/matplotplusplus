@@ -9457,6 +9457,13 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/geral-victor">
+            <img src="https://avatars.githubusercontent.com/u/87695514?v=4" width="100;" alt="geral-victor"/>
+            <br />
+            <sub><b>geral-victor</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/eagle-dai">
             <img src="https://avatars.githubusercontent.com/u/1788093?v=4" width="100;" alt="eagle-dai"/>
             <br />
@@ -9469,6 +9476,14 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Diverger</b></sub>
         </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/wwinslade">
+            <img src="https://avatars.githubusercontent.com/u/103067129?v=4" width="100;" alt="wwinslade"/>
+            <br />
+            <sub><b>William Winslade</b></sub>
+        </a>
     </td>
     <td align="center">
         <a href="https://github.com/tretre91">
@@ -9476,8 +9491,7 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>TrC)vis Morvany</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/TheGreatRambler">
             <img src="https://avatars.githubusercontent.com/u/31906920?v=4" width="100;" alt="TheGreatRambler"/>
@@ -9505,20 +9519,6 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Niclas Wall Wennerdal</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Morwenn">
-            <img src="https://avatars.githubusercontent.com/u/1164683?v=4" width="100;" alt="Morwenn"/>
-            <br />
-            <sub><b>Morwenn</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/globberwops">
-            <img src="https://avatars.githubusercontent.com/u/11492152?v=4" width="100;" alt="globberwops"/>
-            <br />
-            <sub><b>Martin Stump</b></sub>
-        </a>
     </td></tr>
 <tr>
     <td align="center">
@@ -9527,14 +9527,6 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
             <br />
             <sub><b>Andrew Kane</b></sub>
         </a>
-    </td> </tr>
-  <tr>
-    <td align="center">
-      <a href=https://github.com/wwinslade">
-        <img src="https://avatars.githubusercontent.com/u/103067129?v=4" width="100;" alt="wwinslade"/>
-        <br />
-        <sub><b>William Winslade</b></sub>
-      </a>
     </td></tr>
 </table>
 <!-- readme: collaborators,contributors,ankane -end -->
