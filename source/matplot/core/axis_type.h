@@ -145,7 +145,7 @@ namespace matplot {
             1.6500, 1.7000, 1.7500, 1.8500, 1.9000, 1.9500};
 
         // font
-        std::string font_{"Helvetica"};
+        std::string font_{"Arial"};
         float font_size_{10};
         std::string font_weight_{"normal"};
 

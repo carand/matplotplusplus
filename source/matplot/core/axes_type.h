@@ -2815,7 +2815,7 @@ namespace matplot {
 
         // text
         std::optional<float> font_size_{10.f};
-        std::optional<std::string> font_{"Helvetica"};
+        std::optional<std::string> font_{"Arial"};
         std::string font_weight_{"normal"};
 
         // title text

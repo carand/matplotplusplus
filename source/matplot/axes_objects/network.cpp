@@ -80,7 +80,7 @@ namespace matplot {
             }
         }
         if (show_labels_ || !edge_labels_.empty()) {
-            res += ", '-' with labels left font \"Helvetica,11\" offset char 1";
+            res += ", '-' with labels left font \"Arial,11\" offset char 1";
         }
         return res;
     }

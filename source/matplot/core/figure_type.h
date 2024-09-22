@@ -303,7 +303,7 @@ namespace matplot {
         // ARGB
         color_array color_{0., 0.94f, 0.94f, 0.94f};
         bool custom_color_{false}; // was this color defined by the user
-        std::string font_{"Helvetica"};
+        std::string font_{"Arial"};
         float font_size_{8.};
 
         // Axes

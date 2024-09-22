@@ -103,7 +103,7 @@ namespace matplot {
         bool absolute_size_{true};          // reduce font size for
         bool visible_{true};
         enum alignment alignment_ { alignment::automatic };
-        std::string font_{"Helvetica"};
+        std::string font_{"Arial"};
         float font_size_{8};
         color_array color_{0, 0, 0, 0};
     };
