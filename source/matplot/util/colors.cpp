@@ -6,6 +6,7 @@
 #include <cmath>
 #include <matplot/util/colors.h>
 #include <vector>
+#include <cstdint>
 #include <stdexcept>
 
 namespace matplot {
