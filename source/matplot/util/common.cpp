@@ -4,6 +4,7 @@
 
 #include <array>
 #include <cmath>
+#include <cstdio>
 #include <fstream>
 #include <iostream>
 #include <matplot/util/colors.h>
@@ -61,17 +62,19 @@ namespace matplot {
     }
 
     std::string run_and_get_output(const std::string &cmd) {
-        std::unique_ptr<FILE, decltype(&PCLOSE)> pipe(POPEN(cmd.c_str(), "r"),
-                                                      PCLOSE);
-        if (!pipe) {
+        FILE *pipe = nullptr;
+        pipe = popen(cmd.c_str(), "r");
+        if (pipe == nullptr) {
             throw std::runtime_error("popen() failed!");
         }
+
         std::array<char, 128> buffer{};
         std::string result;
-        while (fgets(buffer.data(), static_cast<int>(buffer.size()),
-                     pipe.get()) != nullptr) {
+        while (fgets(buffer.data(), static_cast<int>(buffer.size()), pipe) !=
+               nullptr) {
             result += buffer.data();
         }
+        pclose(pipe);
         return result;
     }
 
@@ -79,7 +82,8 @@ namespace matplot {
         std::string escaped;
         escaped.reserve(label.size());
 
-        std::regex_replace(std::back_inserter(escaped), label.begin(), label.end(), std::regex("\""), "\\\"");
+        std::regex_replace(std::back_inserter(escaped), label.begin(),
+                           label.end(), std::regex("\""), "\\\"");
 
         return escaped;
     }
@@ -682,7 +686,8 @@ namespace matplot {
             return image_channels_t{};
         }
         auto [h, w] = size(A[0]);
-        return imresize(A, static_cast<size_t>(h * scale), static_cast<size_t>(w * scale), m);
+        return imresize(A, static_cast<size_t>(h * scale),
+                        static_cast<size_t>(w * scale), m);
     }
 
     void imwrite(const image_channels_t &A, const std::string &filename) {
@@ -849,8 +854,7 @@ namespace matplot {
     }
 
     std::pair<std::vector<std::string>, std::vector<size_t>>
-    wordcount(std::string_view text,
-              const std::vector<std::string> &black_list,
+    wordcount(std::string_view text, const std::vector<std::string> &black_list,
               std::string_view delimiters, size_t max_cloud_size) {
         auto tokens = tokenize(text, delimiters);
         return wordcount(tokens, black_list, max_cloud_size);
