@@ -9460,7 +9460,7 @@ If contributing to the documentation, please edit [`README.md`](README.md) direc
         <a href="https://github.com/geral-victor">
             <img src="https://avatars.githubusercontent.com/u/87695514?v=4" width="100;" alt="geral-victor"/>
             <br />
-            <sub><b>geral-victor</b></sub>
+            <sub><b>Geral-victor</b></sub>
         </a>
     </td>
     <td align="center">
