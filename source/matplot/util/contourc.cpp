@@ -19,6 +19,8 @@
 #include <matplot/axes_objects/contours.h>
 #include <matplot/util/contourc.h>
 #include <type_traits>
+#include <utility>
+#include <vector>
 
 namespace matplot {
 
@@ -1981,15 +1983,20 @@ namespace matplot {
                                             size_t n_levels) {
         double zmin = z[0][0];
         double zmax = z[0][0];
+
+    {
+
+    std::pair<std::vector<double>::const_iterator,std::vector<double>::const_iterator > tmp;
         for (const auto &z_row : z) {
-            auto [minit, maxit] = std::minmax(z_row.begin(), z_row.end());
-            if (*minit < zmin) {
-                zmin = *minit;
+             tmp = std::minmax(z_row.begin(), z_row.end());
+            if (*tmp.first < zmin) {
+                zmin = *tmp.first;
             }
-            if (*maxit < zmax) {
-                zmax = *maxit;
+            if (*tmp.second < zmax) {
+                zmax = *tmp.second;
             }
         }
+    }
         auto levels = contours::determine_contour_levels(zmin, zmax, n_levels);
         return contourc(x, y, z, levels);
     }
