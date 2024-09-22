@@ -7,6 +7,9 @@ project(Matplot++ VERSION 1.1.0)
 set(MATPLOT_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(MATPLOT_VERSION ${CMAKE_PROJECT_VERSION})
 
+
+# output compiler flags
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #######################################################
 ### CMake Functions                                 ###
 #######################################################
